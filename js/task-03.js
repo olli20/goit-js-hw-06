@@ -12,3 +12,20 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const getItemTemplate = ({ url, alt }) =>
+  `<li class = "gallery--item"><img class = "gallery--image" src = "${url}" alt = "${alt}"></li>`;
+ 
+const refs = {
+  list: document.querySelector('.gallery'),
+}
+
+const render = () => {
+  const lis = images.map((image) => getItemTemplate(image));
+
+  refs.list.innerHTML = '';
+  refs.list.insertAdjacentHTML('beforeend', lis.join(''));
+}
+
+render();
+  
