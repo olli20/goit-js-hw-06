@@ -1,22 +1,28 @@
-let counterValue = 0;
-const spanCounter = document.querySelector('#value');
+let counterCurrentValue = 0;
 
 const refs = {
-    span: document.querySelector('#value'),
-    buttonMinusOne: document.querySelector('#counter button:first-child'),
-    buttonPlusOne: document.querySelector('#counter button:last-child'),
-}
+    counter: document.querySelector('#value'),
+    btnMinusOne: document.querySelector('button[data-action="decrement"]'),
+    btnPlusOne: document.querySelector('button[data-action="increment"]'),
+};
 
 const render = () => {
-    refs.span.textContent = counterValue;
-}
+    refs.counter.textContent = counterCurrentValue;
+};
 
-refs.buttonMinusOne.addEventListener('click', () => {
-    counterValue -= 1;
+refs.btnMinusOne.addEventListener('click', () => {
+    counterCurrentValue -= 1;
     render();
 });
 
-refs.buttonPlusOne.addEventListener('click', () => {
-    counterValue += 1;
+refs.btnPlusOne.addEventListener('click', () => {
+    counterCurrentValue += 1;
     render();
 });
+
+
+// const refs = {
+//     span: document.querySelector('#value'),
+//     buttonMinusOne: document.querySelector('#counter button:first-child'),
+//     buttonPlusOne: document.querySelector('#counter button:last-child'),
+// }
