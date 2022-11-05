@@ -11,10 +11,10 @@ const currentList = document.querySelector('#ingredients');
 
 const newList = [];
 
-ingredients.forEach((item, index) => {
+ingredients.forEach((item) => {
     const listItem = document.createElement('li');
     listItem.textContent = item;
-    listItem.classList.add('list-item');
+    listItem.classList.add('item');
 
     newList.push(listItem);
 });
