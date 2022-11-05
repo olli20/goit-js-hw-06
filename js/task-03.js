@@ -14,7 +14,7 @@ const images = [
 ];
 
 const getItemTemplate = ({ url, alt }) =>
-  `<li class = "gallery--item"><img class = "gallery--image" src = "${url}" alt = "${alt}"></li>`;
+  `<li class = "gallery__item"><img class = "gallery__image" src = "${url}" alt = "${alt}"></li>`;
  
 const refs = {
   list: document.querySelector('.gallery'),
