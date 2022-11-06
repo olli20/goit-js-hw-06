@@ -25,7 +25,13 @@ button {
 
 .gallery {
   display: flex;
-  gap: 25px;
+  gap: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    gap: 12px;
+  }  
 }
 
 .gallery__item {
