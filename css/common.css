@@ -23,5 +23,17 @@ button {
   cursor: pointer;
 }
 
-/* task 3 */
+.gallery {
+  display: flex;
+  gap: 25px;
+}
 
+.gallery__item {
+  list-style: none;
+  width: 300px;
+}
+
+.gallery__image {
+  display: block;
+  width: 100%;
+}
